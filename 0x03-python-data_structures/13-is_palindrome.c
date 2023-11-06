@@ -15,8 +15,8 @@ int is_palindrome(listint_t **head)
 }
 /**
  * palindrome - function that check if is palindrome
- * @head: head list
- * @nd: end list
+ * @head: head list argument
+ * @nd: end list argumnet
  */
 int palindrome(listint_t **head, listint_t *nd)
 {
