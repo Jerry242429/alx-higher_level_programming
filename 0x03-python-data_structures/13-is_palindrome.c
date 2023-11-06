@@ -7,23 +7,23 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int array[10000];
-	int j, m = 0;
-	listint_t *t;
-
-	if (head == NULL)
-		return (0);
-
-	t = *head;
-	while (t)
+	if (head == NULL || *head == NULL)
+		return (1);
+	return (palindrome(head, *head));
+}
+/**
+ * palindrome - function that check if is palindrome
+ * @head: head list
+ * @nd: end list
+ */
+int palindrome(listint_t **head, listint_t *nd)
+{
+	if (nd == NULL)
+		return (1);
+	if (palindrome(head, nd->next) && (*head)->n == nd->n)
 	{
-		array[m++] = t->m;
-		t = t->next;
+		*head = (*head)->next;
+		return (1);
 	}
-	for (j = 0; j < m / 2; j++)
-	{
-		if (array[j] != array[m - j - 1])
-			return (0);
-	}
-	return (1);
+	return (0);
 }
