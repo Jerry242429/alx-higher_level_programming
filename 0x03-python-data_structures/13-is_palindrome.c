@@ -9,14 +9,16 @@
  */
 int is_palindrome(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
+		return (1);
+	else if (*head == NULL)
 		return (1);
 	return (palindrome(head, *head));
 }
 /**
  * palindrome - function that check if is palindrome
- * @head: head list argument
- * @nd: end list argumnet
+ * @head:the head list argument
+ * @nd: the end list argumnet
  */
 int palindrome(listint_t **head, listint_t *nd)
 {
@@ -28,4 +30,4 @@ int palindrome(listint_t **head, listint_t *nd)
 		return (1);
 	}
 	return (0);
-}
+	}
