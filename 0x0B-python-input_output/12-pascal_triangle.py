@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Pascal's Triangle function."""
 def pascal_triangle(n):
-    """Represent Pascal's Triangle of size n.
-    Returns a list of lists of integers representing the triangle.
-    """
+    """Represent Pascal's Triangle of size n."""
     if n <= 0:
         return []
     triangles = [[1]]
