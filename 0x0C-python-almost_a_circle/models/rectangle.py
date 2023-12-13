@@ -2,7 +2,6 @@
 '''Rectangle class Module.'''
 from models.base import Base
 
-
 class Rectangle(Base):
     """class of Rectangle."""
 
@@ -78,6 +77,18 @@ class Rectangle(Base):
         return '[{}] ({}) {}/{} - {}/{}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
+    def update(self, *args, **kwargs):
+        '''Updates using  no-keyword & keyword args.'''
+        # print(args, kwargs)
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+    def to_dictionary(self):
+        '''Returns dictionary class.'''
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         '''Internal method that updates instance attributes via */**args.'''
@@ -91,16 +102,3 @@ class Rectangle(Base):
             self.x = x
         if y is not None:
             self.y = y
-
-    def update(self, *args, **kwargs):
-        '''Updates using  no-keyword & keyword args.'''
-        # print(args, kwargs)
-        if args:
-            self.__update(*args)
-        elif kwargs:
-            self.__update(**kwargs)
-
-    def to_dictionary(self):
-        '''Returns dictionary class.'''
-        return {"id": self.id, "width": self.__width, "height": self.__height,
-                "x": self.__x, "y": self.__y}
