@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class for Rectangle unit tests."""
+'''Module for Rectangle unit tests.'''
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -9,25 +9,25 @@ import io
 
 
 class TestRectangle(unittest.TestCase):
-    """Base class tester."""
+    '''Tests the Base class.'''
 
     def setUp(self):
-        """Imports module"""
+        '''Imports module, instantiates class'''
         Base._Base__nb_objects = 0
 
     def tearDown(self):
-        """test_method."""
+        '''Cleans up after each test_method.'''
         pass
 
     # ----------------- Tests for #2 ------------------------
 
     def test_A_class(self):
-        """Rectangle class."""
+        '''Tests Rectangle class type.'''
         self.assertEqual(str(Rectangle),
                          "<class 'models.rectangle.Rectangle'>")
 
     def test_B_inheritance(self):
-        '''Rectangle Base tester.'''
+        '''Tests if Rectangle inherits Base.'''
         self.assertTrue(issubclass(Rectangle, Base))
 
     def test_C_constructor_no_args(self):
