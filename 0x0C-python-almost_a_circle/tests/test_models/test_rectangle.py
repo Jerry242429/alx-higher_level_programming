@@ -290,12 +290,6 @@ given"
             r.display()
         s = """
 
-
-
-
-
-
-
        #####
        #####
        #####
@@ -324,12 +318,6 @@ given"
         with redirect_stdout(f):
             r.display()
         s = """\
-
-
-
-
-
-
 
 
 
@@ -367,9 +355,6 @@ given"
         with redirect_stdout(f):
             r.display()
         s = """\
-
-
-
 
 #####
 #####

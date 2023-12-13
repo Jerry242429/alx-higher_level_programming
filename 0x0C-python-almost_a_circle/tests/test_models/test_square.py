@@ -306,14 +306,6 @@ were given"
         s = """\
 
 
-
-
-
-
-
-
-
-
  #
 """
         self.assertEqual(f.getvalue(), s)
@@ -362,9 +354,6 @@ were given"
         with redirect_stdout(f):
             r.display()
         s = """\
-
-
-
 
 #####
 #####
