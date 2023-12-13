@@ -5,7 +5,6 @@ import os.path
 import csv
 import turtle
 
-
 class Base:
     """Defines properties of Base."""
     __nb_objects = 0
